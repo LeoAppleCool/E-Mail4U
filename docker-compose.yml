@@ -1,0 +1,17 @@
+services:
+  email4u:
+    build: .
+    image: email4u:latest
+    container_name: email4u
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - email4u-data:/app/data
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
+
+volumes:
+  email4u-data:

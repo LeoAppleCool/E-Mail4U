@@ -1,0 +1,8 @@
+node_modules
+data
+tests
+.env
+.git
+.claude-flow
+.swarm
+*.log

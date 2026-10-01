@@ -1,0 +1,32 @@
+{
+  "name": "email4u",
+  "version": "1.0.0",
+  "description": "Discord bot that creates Cloudflare Email Routing addresses and posts incoming mail into private Discord forum threads.",
+  "private": true,
+  "type": "module",
+  "main": "src/index.js",
+  "license": "MIT",
+  "keywords": [
+    "discord",
+    "discord-bot",
+    "cloudflare",
+    "email-routing",
+    "cloudflare-workers",
+    "durable-objects",
+    "email"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/index.js",
+    "test": "node --disable-warning=ExperimentalWarning --test \"tests/**/*.test.js\"",
+    "test:relay": "node tests/relay.integration.mjs"
+  },
+  "dependencies": {
+    "discord.js": "^14.27.0",
+    "html-to-text": "^10.0.1",
+    "mailparser": "^3.9.32",
+    "ws": "^8.22.0"
+  }
+}
